@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary">
 
   <link rel="canonical" href="https://egressfox.io/">
-  <link rel="icon" href="./assets/egressfox.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/fox-mark.svg">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -28,7 +28,12 @@
   <div class="page">
     <header class="header">
       <a class="brand" href="/" aria-label="EgressFox home">
-        <img src="./assets/egressfox.png" alt="" width="36" height="36">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44">
+            <path d="M8.2 10.6 17 15.2 22 8l5 7.2 8.8-4.6-2.2 12.6c-.9 5.2-5.8 10.2-11.6 12.1-5.8-1.9-10.7-6.9-11.6-12.1L8.2 10.6Z"/>
+            <path class="mark-cut" d="M14.4 19.2 22 24l7.6-4.8-2.9 7.5L22 30.4l-4.7-3.7-2.9-7.5Z"/>
+          </svg>
+        </span>
         <span>EgressFox</span>
       </a>
 
@@ -92,25 +97,35 @@
 
       <div class="visual" aria-hidden="true">
         <div class="route-field">
-          <svg class="routes" viewBox="0 0 560 560">
-            <path class="route route-one" d="M40 170c105 0 122 110 240 110s132-105 240-105"/>
-            <path class="route route-two" d="M40 280h480"/>
-            <path class="route route-three" d="M40 390c105 0 125-110 240-110s136 105 240 105"/>
-            <circle class="route-node start" cx="40" cy="280" r="5"/>
-            <circle class="route-node" cx="168" cy="280" r="4"/>
-            <circle class="route-node active" cx="280" cy="280" r="5"/>
-            <circle class="route-node" cx="394" cy="280" r="4"/>
-            <circle class="route-node end" cx="520" cy="280" r="5"/>
-          </svg>
-
           <div class="logo-halo"></div>
-          <img
-            class="hero-logo"
-            src="./assets/egressfox.png"
-            alt=""
-            width="460"
-            height="460"
-          >
+          <svg class="routes" viewBox="0 0 560 560">
+            <defs>
+              <linearGradient id="chosen-path" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ff6a14" stop-opacity=".42"/>
+                <stop offset="66%" stop-color="#ff8b36" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#ffc18b" stop-opacity=".84"/>
+              </linearGradient>
+            </defs>
+
+            <circle class="orbit orbit-inner" cx="280" cy="280" r="153"/>
+            <circle class="orbit orbit-outer" cx="280" cy="280" r="217"/>
+            <path class="route route-in" d="M24 280H280"/>
+            <path class="route route-option" d="M280 280C365 280 377 280 443 280H531"/>
+            <path class="route route-option" d="M280 280C367 280 386 365 450 382H531"/>
+            <path class="route route-selected" d="M280 280C365 280 386 178 450 178H531"/>
+
+            <circle class="route-node route-start" cx="24" cy="280" r="4.5"/>
+            <circle class="route-node route-dim-node" cx="531" cy="280" r="4.5"/>
+            <circle class="route-node route-dim-node" cx="531" cy="382" r="4.5"/>
+            <circle class="route-node route-end" cx="531" cy="178" r="5.5"/>
+            <circle class="route-ring" cx="531" cy="178" r="12"/>
+          </svg>
+          <div class="hero-mark">
+            <svg viewBox="0 0 44 44">
+              <path d="M8.2 10.6 17 15.2 22 8l5 7.2 8.8-4.6-2.2 12.6c-.9 5.2-5.8 10.2-11.6 12.1-5.8-1.9-10.7-6.9-11.6-12.1L8.2 10.6Z"/>
+              <path class="mark-cut" d="M14.4 19.2 22 24l7.6-4.8-2.9 7.5L22 30.4l-4.7-3.7-2.9-7.5Z"/>
+            </svg>
+          </div>
         </div>
       </div>
     </main>

@@ -90,12 +90,25 @@ img {
   letter-spacing: -.02em;
 }
 
-.brand img {
+.brand-mark {
+  display: grid;
   width: 35px;
   height: 35px;
+  place-items: center;
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 10px;
+  background: rgba(255,106,20,.075);
   box-shadow: 0 6px 18px rgba(0,0,0,.28);
+}
+
+.brand-mark svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--orange);
+}
+
+.mark-cut {
+  fill: var(--bg);
 }
 
 .github-link {
@@ -263,70 +276,106 @@ h1 .headline-accent {
   overflow: visible;
 }
 
-.route {
+.orbit {
   fill: none;
-  stroke-linecap: round;
-  stroke-width: 1.25;
-}
-
-.route-one,
-.route-three {
-  stroke: rgba(255, 255, 255, .075);
-  stroke-dasharray: 3 10;
-}
-
-.route-two {
-  stroke: rgba(255, 106, 20, .4);
-  stroke-width: 1.55;
-}
-
-.route-node {
-  fill: #252932;
-  stroke: rgba(255,255,255,.18);
+  stroke: rgba(255,255,255,.052);
   stroke-width: 1;
 }
 
-.route-node.start,
-.route-node.end {
-  fill: var(--orange);
-  stroke: rgba(255, 137, 67, .55);
+.orbit-inner {
+  stroke-dasharray: 2 9;
 }
 
-.route-node.active {
-  fill: var(--orange);
-  stroke: rgba(255, 137, 67, .7);
-  filter: drop-shadow(0 0 7px rgba(255, 106, 20, .65));
+.orbit-outer {
+  stroke: rgba(255,255,255,.035);
+}
+
+.route {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.route-in {
+  stroke: rgba(255,255,255,.22);
+  stroke-width: 1.6;
+}
+
+.route-option {
+  stroke: rgba(255,255,255,.16);
+  stroke-width: 1.45;
+  stroke-dasharray: 3 8;
+}
+
+.route-selected {
+  stroke: url(#chosen-path);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 4px rgba(255,106,20,.24));
+}
+
+.route-node {
+  fill: #1d2128;
+  stroke: rgba(255,255,255,.24);
+  stroke-width: 1;
+}
+
+.route-start {
+  fill: #b0a6a0;
+  stroke: rgba(255,255,255,.27);
+}
+
+.route-end {
+  fill: #ff9a50;
+  stroke: rgba(255,176,115,.8);
+  filter: drop-shadow(0 0 6px rgba(255,106,20,.7));
+}
+
+.route-ring {
+  fill: none;
+  stroke: rgba(255,135,48,.35);
+  stroke-width: 1;
 }
 
 .logo-halo {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 350px;
-  height: 350px;
-  border: 1px solid rgba(255,255,255,.055);
+  width: 310px;
+  height: 310px;
+  border: 1px solid rgba(255,255,255,.043);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 50% 50%, rgba(255,106,20,.11), transparent 58%),
-    rgba(9,10,12,.48);
+    radial-gradient(circle at 50% 50%, rgba(255,106,20,.095), transparent 65%),
+    rgba(9,10,12,.15);
   box-shadow:
     0 0 80px rgba(255,106,20,.055),
     inset 0 0 45px rgba(255,255,255,.018);
   transform: translate(-50%, -50%);
-  backdrop-filter: blur(4px);
 }
 
-.hero-logo {
+.hero-mark {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 278px;
-  height: 278px;
-  border-radius: 28%;
+  display: grid;
+  width: 172px;
+  height: 172px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.095);
+  border-radius: 37px;
+  background: #101116;
   box-shadow:
-    0 26px 70px rgba(0, 0, 0, .42),
-    0 0 48px rgba(255, 106, 20, .055);
+    0 25px 72px rgba(0,0,0,.4),
+    0 0 52px rgba(255,106,20,.075),
+    inset 0 1px 0 rgba(255,255,255,.035);
   transform: translate(-50%, -50%);
+}
+
+.hero-mark svg {
+  width: 114px;
+  height: 114px;
+  fill: var(--orange);
+  filter: drop-shadow(0 5px 12px rgba(255,106,20,.18));
 }
 
 .footer {
@@ -377,13 +426,19 @@ h1 .headline-accent {
   }
 
   .logo-halo {
-    width: 250px;
-    height: 250px;
+    width: 244px;
+    height: 244px;
   }
 
-  .hero-logo {
-    width: 198px;
-    height: 198px;
+  .hero-mark {
+    width: 142px;
+    height: 142px;
+    border-radius: 31px;
+  }
+
+  .hero-mark svg {
+    width: 91px;
+    height: 91px;
   }
 }
 
@@ -397,7 +452,7 @@ h1 .headline-accent {
     height: 72px;
   }
 
-  .brand img {
+  .brand-mark {
     width: 32px;
     height: 32px;
   }
@@ -416,10 +471,15 @@ h1 .headline-accent {
     height: 174px;
   }
 
-  .hero-logo {
-    width: 142px;
-    height: 142px;
-    border-radius: 27%;
+  .hero-mark {
+    width: 109px;
+    height: 109px;
+    border-radius: 24px;
+  }
+
+  .hero-mark svg {
+    width: 71px;
+    height: 71px;
   }
 
   .eyebrow {
