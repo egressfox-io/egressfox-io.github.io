@@ -1,0 +1,33 @@
+# EgressFox
+
+> EgressFox is an open-source adaptive egress control plane for reliable external connectivity.
+
+Status: Pre-alpha; API v1alpha1.
+
+Core functionality is implemented. Public releases, API stability, and production readiness are not yet guaranteed. Breaking changes may occur.
+
+## Website
+
+- [Homepage in Markdown](https://egressfox.io/index.html.md): Product, audience, workflow, YAML example, implemented capabilities, limitations, maintainer, and contact.
+- [Full website text](https://egressfox.io/llms-full.txt): The complete public homepage in one Markdown document.
+- [Homepage](https://egressfox.io/): The human-readable website.
+
+## Documentation
+
+- [Product scope](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/product.md)
+- [Follow the roadmap](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/roadmap/p1.md)
+- [Check engine compatibility](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/designs/engine-protocol-compatibility.md)
+- [Operator guide](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/operations/kubernetes.md): Kubernetes setup, managed gateways, and BYO operation.
+- [Roadmap](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/roadmap/README.md): Completed milestones, current priorities, and later horizons.
+- [Architecture decisions](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/decisions/README.md): The contracts and tradeoffs behind the control plane.
+- [Threat model](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/security/threat-model.md): Trust boundaries, implemented controls, and residual risks.
+- [Security policy](https://raw.githubusercontent.com/egressfox-io/egressfox/main/SECURITY.md): Supported versions and confidential vulnerability reporting.
+- [Release guide](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/operations/releasing.md): Artifact verification, checksums, SBOMs, and provenance.
+- [Browse all documentation](https://raw.githubusercontent.com/egressfox-io/egressfox/main/docs/README.md)
+- [Maintainer responsibilities](https://raw.githubusercontent.com/egressfox-io/egressfox/main/MAINTAINERS.md)
+
+## Source and licensing
+
+- [Source repository](https://github.com/egressfox-io/egressfox): Public implementation and project README.
+- [License](https://raw.githubusercontent.com/egressfox-io/egressfox/main/LICENSE): Apache-2.0 for EgressFox itself.
+- [Third-party notices](https://raw.githubusercontent.com/egressfox-io/egressfox/main/THIRD_PARTY_NOTICES.md): Separate licenses and notices for bundled engines.
